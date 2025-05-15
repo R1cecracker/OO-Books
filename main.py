@@ -4,28 +4,22 @@
 # Create the Magazine class that inherits from Book class.
 class Book():
     def __init__(self):
-        self.title = title
-        self.author = author
-        self.year = year
-        self.numPages = numPages
+        self.title = str
+        self.author = str
+        self.year = int
+        self.numPages = int
     
-    def self.displayDetails():
+    def displayDetails(self):
     
-    def self.rateBook(rating):
-
-    def self.reviewBook(review)
 
 class Novel(Book):
     def __init__(self):
-        self.genre = genre
-        self.numChapters = numChapters
-    
-    def self.calcReadTime(readSpeed):
+        self.genre = str
+        self.numChapters = int
 
 class Magazine(Book):
     def __init__(self):
-        self.issueNumber = issueNumber
-        self.numArticles = numArticles
+        self.issueNumber = int
+        self.numArticles = int
     
-    def self.getArticleByTitle():
-        
+    def getArticleByTitle(self):
