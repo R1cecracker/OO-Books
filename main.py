@@ -3,23 +3,41 @@
 # Create the Novel class that inherits from Book class.
 # Create the Magazine class that inherits from Book class.
 class Book():
-    def __init__(self):
-        self.title = str
-        self.author = str
-        self.year = int
-        self.numPages = int
-    
-    def displayDetails(self):
-    
+    def __init__(self, title, author, year):
+        self.title = title
+        self.author = author
+        self.year = year
 
+    def displayDetails(self):
+        print(f"Book: {self.title}")
+        print(f"Author: {self.author}")
 class Novel(Book):
-    def __init__(self):
-        self.genre = str
-        self.numChapters = int
+    def __init__(self, title, author, year, genre, numChapters):
+        super().__init__(title, author, year)
+        self.genre = genre
+        self.numChapters = numChapters
+
+    def displayDetails(self):
+        print(f"{self.title} by {self.author}")
+        print(f"Genre: {self.genre}")
+        print(f"Chapters: {self.numChapters}")
 
 class Magazine(Book):
-    def __init__(self):
-        self.issueNumber = int
-        self.numArticles = int
-    
+    def __init__(self, title, author, year, issueNumber, numArticles):
+        super().__init__(title, author, year)
+        self.issueNumber = issueNumber
+        self.numArticles = numArticles
+
     def getArticleByTitle(self):
+        pass
+
+
+#main (polymorphism)
+library = [
+    Book("The Hobbit", "J.R.R. Tolkien", 1937),
+    Novel("The Adventures of Captain Underpants", "Dav Pilkey", 1997, "Fiction", 12),
+]
+
+for item in library:
+    item.displayDetails()  # Display details of each item in library
+    print("•")
